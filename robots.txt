@@ -1,0 +1,25 @@
+# Estudio Jurídico F&Y · Salta Iuris
+User-agent: *
+Allow: /
+
+# Buscadores con IA y asistentes: bienvenidos
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://lucianoflores1.github.io/estudio-fy/sitemap.xml
