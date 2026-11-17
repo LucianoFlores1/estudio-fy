@@ -58,6 +58,9 @@
           "addressCountry": "AR"
         },
         "hasMap": "https://www.google.com/maps/search/?api=1&query=Santa+Fe+474+Salta",
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "08:00", "closes": "20:00" }
+        ],
         "areaServed": { "@type": "AdministrativeArea", "name": "Provincia de Salta" },
         "sameAs": [
           "https://www.instagram.com/abogadas.salta.iuris",
@@ -187,7 +190,7 @@
               <label class="opt opt--person">
                 <input type="radio" name="dra" value="yonar">
                 <img src="assets/fotos/dra-yonar.jpg" alt="" width="44" height="44">
-                <span class="opt__body"><b>Dra. Paula Talía Yonar</b><small>Lunes, miércoles y viernes</small></span>
+                <span class="opt__body"><b>Dra. Paula Talía Yonar</b><small>Lunes a sábado</small></span>
               </label>
               <label class="opt opt--person">
                 <input type="radio" name="dra" value="any">
@@ -359,11 +362,11 @@
           </li>
         </ul>
 
-        <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Santa+Fe+474+Salta" target="_blank" rel="noopener">
+        <a class="place" href="https://www.google.com/maps/dir/?api=1&amp;destination=Santa+Fe+474%2C+Salta%2C+Argentina" target="_blank" rel="noopener" aria-label="Cómo llegar a Santa Fe 474, Salta, desde tu ubicación">
           <img src="assets/fotos/mapa-santa-fe-474.jpg" alt="Mapa de la ubicación del estudio en Santa Fe 474, Salta" width="800" height="666" loading="lazy">
           <span class="place__label">
             <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>
-            <span><b>Santa Fe 474</b><small>Salta Capital · Abrir en Google Maps</small></span>
+            <span><b>Santa Fe 474</b><small>Salta Capital · Cómo llegar desde donde estás</small></span>
           </span>
         </a>
       </div>
@@ -376,14 +379,14 @@
       <ul class="social">
         <li><a href="https://www.instagram.com/abogadas.salta.iuris" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ig"/></svg></a></li>
         <li><a href="https://www.tiktok.com/@abogadas.salta.iuris" target="_blank" rel="noopener" aria-label="TikTok"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tt"/></svg></a></li>
-        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Santa+Fe+474+Salta" target="_blank" rel="noopener" aria-label="Ubicación"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg></a></li>
+        <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Santa+Fe+474%2C+Salta%2C+Argentina" target="_blank" rel="noopener" aria-label="Cómo llegar"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg></a></li>
       </ul>
       <p>© <span data-year>2026</span> Estudio Jurídico F&amp;Y · Salta Iuris</p>
     </div>
   </footer>
 
   <!-- WhatsApp flotante -->
-  <button class="fab" type="button" data-open-wa aria-label="Escribir por WhatsApp">
+  <button class="fab is-hidden" type="button" data-open-wa aria-label="Escribir por WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
   </button>
 

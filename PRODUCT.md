@@ -25,10 +25,10 @@ A women-led firm of two lawyers practicing in the Province of Salta, offering pe
 ## Operating Context
 
 - Office: Santa Fe 474, Salta Capital.
-- Dra. Flores Ana Paula · +54 9 387 542-9897 · anapaulaflores012706@gmail.com · attends Mon–Fri 9–17 (per current booking seed).
-- Dra. Yonar Paula Talía · +54 9 387 482-8131 · abogadasalta.iuris@gmail.com · attends Mon, Wed, Fri 10–16 (per current booking seed).
+- Dra. Flores Ana Paula · +54 9 387 542-9897 · anapaulaflores012706@gmail.com · attends Mon–Fri, slots 9:00–19:00 (verified on live booking UI, 2026-11-17).
+- Dra. Yonar Paula Talía · +54 9 387 482-8131 · abogadasalta.iuris@gmail.com · attends Mon–Sat, slots 8:00–19:00 (verified on live booking UI, 2026-11-17).
 - Instagram and TikTok: @abogadas.salta.iuris.
-- Redesign must be self-contained: booking happens on the page (no link to the old app). Current build: 4-step wizard, Sundays excluded, 24h lead, 14 days ahead, confirmation sent via WhatsApp. Mobile-first: most traffic is mobile. Keep copy short.
+- Redesign must be self-contained: booking happens on the page (no link to the old app). Current build: 4-step wizard, Sundays excluded, 24h lead, 7 days ahead, confirmation sent via WhatsApp. Mobile-first: most traffic is mobile. Keep copy short.
 
 ## Capabilities and Constraints
 

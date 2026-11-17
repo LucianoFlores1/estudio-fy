@@ -1,17 +1,17 @@
 (function () {
   "use strict";
 
-  // ---- Datos del estudio (los mismos que usa su sistema de turnos) ----
+  // ---- Horarios de su sistema de turnos: [primer turno, cierre). 6 = sábado ----
   var DRAS = {
-    flores: { nombre: "Dra. Ana Paula Flores", corto: "Dra. Flores", wa: "5493875429897", horario: { 1: [9, 17], 2: [9, 17], 3: [9, 17], 4: [9, 17], 5: [9, 17] } },
-    yonar: { nombre: "Dra. Paula Talía Yonar", corto: "Dra. Yonar", wa: "5493874828131", horario: { 1: [10, 16], 3: [10, 16], 5: [10, 16] } }
+    flores: { nombre: "Dra. Ana Paula Flores", corto: "Dra. Flores", wa: "5493875429897", horario: { 1: [9, 20], 2: [9, 20], 3: [9, 20], 4: [9, 20], 5: [9, 20] } },
+    yonar: { nombre: "Dra. Paula Talía Yonar", corto: "Dra. Yonar", wa: "5493874828131", horario: { 1: [8, 20], 2: [8, 20], 3: [8, 20], 4: [8, 20], 5: [8, 20], 6: [8, 20] } }
   };
   var MODOS = {
     Presencial: "En nuestro estudio, Santa Fe 474, Salta Capital.",
     Escrita: "Mandanos tu consulta y te asesoramos por escrito.",
     Online: "Estés donde estés, te asesoramos por videollamada."
   };
-  var DIAS_MAX = 14;           // cuántos días hacia adelante se puede reservar
+  var DIAS_MAX = 7;            // cuántos días hacia adelante se puede reservar
   var ANTICIPACION_H = 24;     // horas mínimas de anticipación
   var MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
   var DIAS = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
@@ -42,15 +42,20 @@
   $$(".sheet__opt", sheet).forEach(function (a) { a.addEventListener("click", function () { setTimeout(closeSheet, 250); }); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !sheet.hidden) closeSheet(); });
 
-  // El botón flotante se oculta mientras se completa el turno (no tapa "Continuar").
-  // y mientras se ve el inicio, que ya tiene su propio botón de WhatsApp.
-  if ("IntersectionObserver" in window) {
-    var vis = {};
-    var io = new IntersectionObserver(function (es) {
-      es.forEach(function (en) { vis[en.target.id] = en.isIntersecting; });
-      fab.classList.toggle("is-hidden", !!(vis.inicio || vis.turnos));
-    }, { threshold: 0.15 });
-    io.observe($("#inicio")); io.observe($("#turnos"));
+  // El botón flotante aparece justo cuando el botón de WhatsApp del inicio sale de la pantalla
+  // (también cuando queda tapado por el encabezado fijo).
+  var heroWa = $(".hero [data-open-wa]");
+  if ("IntersectionObserver" in window && heroWa) {
+    var header = $(".top"), io = null;
+    var watch = function () {
+      if (io) io.disconnect();
+      io = new IntersectionObserver(function (es) {
+        fab.classList.toggle("is-hidden", es[0].isIntersecting);
+      }, { rootMargin: "-" + header.offsetHeight + "px 0px 0px 0px", threshold: 0 });
+      io.observe(heroWa);
+    };
+    watch();
+    window.addEventListener("resize", watch);
   }
 
   // ---------- Turnos ----------
