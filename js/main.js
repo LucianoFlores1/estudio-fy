@@ -45,7 +45,7 @@
   // El botón flotante aparece justo cuando el botón de WhatsApp del inicio sale de la pantalla
   // (también cuando queda tapado por el encabezado fijo).
   var heroWa = $(".hero [data-open-wa]");
-  if ("IntersectionObserver" in window && heroWa) {
+  if ("IntersectionObserver" in window && heroWa && fab) {
     var header = $(".top"), io = null;
     var watch = function () {
       if (io) io.disconnect();
@@ -145,7 +145,22 @@
     return Object.keys(set).map(Number).sort(function (a, b) { return a - b; });
   }
 
+  function renderStrip() {
+    var t = today0(), h = '<div class="strip" role="group" aria-label="Días disponibles">';
+    for (var i = 0; i <= DIAS_MAX; i++) {
+      var date = new Date(t); date.setDate(t.getDate() + i);
+      var k = key(date), ok = horas(date).length > 0, sun = date.getDay() === 0;
+      h += '<button type="button" data-day="' + k + '" aria-pressed="' + (S.fecha === k) + '"' + (ok ? "" : " disabled") +
+        ' aria-label="' + DIAS[date.getDay()] + " " + date.getDate() + " de " + MESES[date.getMonth()] + (ok ? "" : ", sin turnos") + '">' +
+        "<small>" + DIAS[date.getDay()].slice(0, 3) + "</small><b>" + date.getDate() + "</b><i>" + (sun ? "Cerrado" : ok ? MESES[date.getMonth()].slice(0, 3) : "—") + "</i></button>";
+    }
+    h += '</div><p class="cal__legend">Domingos cerrado. Turnos con 24 h de anticipación.</p>';
+    $("[data-cal]").innerHTML = h;
+    renderSlots();
+  }
+
   function renderCal() {
+    if (form.dataset.calMode === "strip") return renderStrip();
     var t = today0();
     if (!S.view) S.view = new Date(t.getFullYear(), t.getMonth(), 1);
     var y = S.view.getFullYear(), m = S.view.getMonth();
@@ -289,6 +304,20 @@
     quienNext.disabled = true;
     trail = ["tipo"];
     show("tipo", 1);
+  });
+
+  // Accesos directos: tocar a una abogada fuera del formulario empieza su turno.
+  $$("[data-pick-dra]").forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      e.preventDefault();
+      var r = form.querySelector('input[name="tipo"][value="consulta"]');
+      r.checked = true; S.tipo = "consulta"; $("[data-tramite-field]").hidden = true;
+      var d = form.querySelector('input[name="dra"][value="' + el.dataset.pickDra + '"]');
+      d.checked = true; S.dra = d.value; S.fecha = null; S.hora = null; S.view = null;
+      checkQuien();
+      trail = ["tipo"]; go("quien");
+      $("#turnos").scrollIntoView({ behavior: reduced() ? "auto" : "smooth" });
+    });
   });
 
   var y = $("[data-year]"); if (y) y.textContent = new Date().getFullYear();

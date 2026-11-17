@@ -205,7 +205,7 @@ input, textarea, select { font-size: 16px; }
 .wiz__track { height: 3px; background: var(--line); border-radius: 3px; overflow: hidden; }
 .wiz__track i { display: block; height: 100%; width: 25%; background: var(--bronze); transition: width 320ms var(--ease-out); }
 
-.step { display: grid; gap: 10px; }
+.step { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
 .step[hidden] { display: none; }
 .step.is-in { animation: stepIn 260ms var(--ease-out); }
 @keyframes stepIn { from { opacity: 0; transform: translateX(12px); } }

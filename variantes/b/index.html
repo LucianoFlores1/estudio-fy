@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+  <title>Variante B · Membrete · Estudio Jurídico F&amp;Y</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://lucianoflores1.github.io/estudio-fy/">
+  <meta name="theme-color" content="#f7f3ee">
+  <link rel="icon" href="../../favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="b.css">
+</head>
+<body class="v-b">
+  <header class="top">
+    <div class="top__in wrap">
+      <a class="brand" href="#inicio" aria-label="Estudio Jurídico F&amp;Y, inicio">
+        <img src="../../assets/isotipo-marron.png" alt="" width="34" height="34">
+        <span class="brand__name"><b>F&amp;Y</b><small>Estudio Jurídico</small></span>
+      </a>
+      <nav class="nav" aria-label="Secciones"><a href="#turnos">Turnos</a><a href="#servicios">Servicios</a><a href="#contacto">Contacto</a></nav>
+      <a class="btn btn--ink btn--sm" href="#turnos">Reservar turno</a>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap mb">
+        <img class="mb__logo" src="../../assets/logo-marron.png" alt="Estudio Jurídico F&amp;Y, Salta Iuris" width="534" height="534">
+        <h1 class="hero__title">Somos un estudio jurídico integrado por <em>abogadas</em> con ejercicio profesional en la Provincia de Salta.</h1>
+        <p class="mb__lede">Brindamos asesoramiento y representación legal integral, acompañando a nuestros clientes en la prevención, resolución y seguimiento de sus asuntos jurídicos, con un enfoque</p>
+        <ul class="mb__values" aria-label="Nuestro enfoque"><li>Responsable</li><li>Personalizado</li><li>Comprometido</li></ul>
+        <div class="hero__cta mb__cta">
+          <a class="btn btn--ink btn--lg" href="#turnos"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cal"/></svg>Reservar turno</a>
+          <button class="btn btn--line btn--lg hero__wa" type="button" data-open-wa><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</button>
+        </div>
+        <ul class="firmas" aria-label="Las abogadas">
+          <li><img src="../../assets/fotos/dra-flores-avatar.jpg" alt="" width="120" height="120"><b>Dra. Ana Paula Flores</b><small>Abogada</small></li>
+          <li><img src="../../assets/fotos/dra-yonar-avatar.jpg" alt="" width="120" height="120"><b>Dra. Paula Talía Yonar</b><small>Abogada</small></li>
+        </ul>
+      </div>
+    </section>
+    <section class="book" id="turnos" aria-labelledby="book-title">
+      <div class="wrap book__in">
+        <div class="book__head">
+          <h2 id="book-title" class="h2">Reservá tu turno</h2>
+          <p class="muted">En cuatro pasos. Te confirmamos por WhatsApp.</p>
+        </div>
+        <form class="wiz" data-wiz novalidate>
+          <div class="wiz__bar">
+            <button type="button" class="wiz__back" data-back aria-label="Volver al paso anterior" hidden>
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-back"/></svg>
+            </button>
+            <div class="wiz__progress">
+              <small data-step-label>Paso 1 de 4</small>
+              <div class="wiz__track"><i data-step-fill></i></div>
+            </div>
+          </div>
+
+          <!-- Paso 1 -->
+          <fieldset class="step" data-step="tipo">
+            <legend class="step__title">¿Qué necesitás?</legend>
+            <label class="opt">
+              <input type="radio" name="tipo" value="consulta">
+              <span class="opt__body"><b>Consulta con una abogada</b><small>Elegí la modalidad y la profesional que más te convenga.</small></span>
+              <svg class="ic opt__chev" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chev"/></svg>
+            </label>
+            <label class="opt">
+              <input type="radio" name="tipo" value="tramite">
+              <span class="opt__body"><b>Trámite administrativo</b><small>Gestiones y papeles que no requieren abogada.</small></span>
+              <svg class="ic opt__chev" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chev"/></svg>
+            </label>
+          </fieldset>
+
+          <!-- Paso 2 -->
+          <div class="step" data-step="quien" hidden>
+            <fieldset>
+              <legend class="step__title">¿Cómo preferís la consulta?</legend>
+              <div class="seg" role="presentation">
+                <label><input type="radio" name="modo" value="Presencial"><span>Presencial</span></label>
+                <label><input type="radio" name="modo" value="Escrita"><span>Escrita</span></label>
+                <label><input type="radio" name="modo" value="Online"><span>Online</span></label>
+              </div>
+              <p class="seg__note" data-modo-note>Elegí una modalidad.</p>
+            </fieldset>
+
+            <fieldset class="step__group">
+              <legend class="step__sub">¿Con quién?</legend>
+              <label class="opt opt--person">
+                <input type="radio" name="dra" value="flores">
+                <img src="../../assets/fotos/dra-flores-avatar.jpg" alt="" width="44" height="44">
+                <span class="opt__body"><b>Dra. Ana Paula Flores</b><small>Lunes a viernes</small></span>
+              </label>
+              <label class="opt opt--person">
+                <input type="radio" name="dra" value="yonar">
+                <img src="../../assets/fotos/dra-yonar-avatar.jpg" alt="" width="44" height="44">
+                <span class="opt__body"><b>Dra. Paula Talía Yonar</b><small>Lunes a sábado</small></span>
+              </label>
+              <label class="opt opt--person">
+                <input type="radio" name="dra" value="any">
+                <span class="opt__any" aria-hidden="true"><img src="../../assets/isotipo-marron.png" alt="" width="26" height="26"></span>
+                <span class="opt__body"><b>Cualquier profesional</b><small>Lo definimos nosotras y te avisamos.</small></span>
+              </label>
+            </fieldset>
+            <button type="button" class="btn btn--ink btn--block" data-next disabled>Continuar</button>
+          </div>
+
+          <!-- Paso 3 -->
+          <div class="step" data-step="fecha" hidden>
+            <p class="step__title">Elegí día y horario</p>
+            <div class="cal" data-cal></div>
+            <div class="slots" data-slots hidden>
+              <p class="step__sub" data-slots-title></p>
+              <div class="slots__grid" data-slots-grid></div>
+            </div>
+            <button type="button" class="btn btn--ink btn--block" data-next disabled>Continuar</button>
+          </div>
+
+          <!-- Paso 4 -->
+          <div class="step" data-step="datos" hidden>
+            <p class="step__title">Tus datos</p>
+            <div class="summary" data-summary></div>
+            <label class="field" data-tramite-field hidden>
+              <span>¿Qué trámite necesitás?</span>
+              <textarea name="detalle" rows="3" placeholder="Contanos brevemente"></textarea>
+            </label>
+            <label class="field">
+              <span>Nombre y apellido</span>
+              <input name="nombre" type="text" autocomplete="name" enterkeyhint="next" required>
+            </label>
+            <label class="field">
+              <span>Teléfono</span>
+              <input name="tel" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" required>
+            </label>
+            <label class="field">
+              <span>Correo <i>(opcional)</i></span>
+              <input name="mail" type="email" autocomplete="email" autocapitalize="none" enterkeyhint="done">
+            </label>
+            <p class="form-error" data-error role="alert" hidden></p>
+            <button type="submit" class="btn btn--ink btn--block">
+              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+              Confirmar turno
+            </button>
+            <p class="fine">Se abre WhatsApp con tu reserva lista para enviar.</p>
+          </div>
+
+          <!-- Listo -->
+          <div class="step step--done" data-step="listo" hidden>
+            <img class="done__seal" src="../../assets/isotipo-marron.png" alt="" width="64" height="64">
+            <p class="step__title">¡Turno solicitado!</p>
+            <p class="muted" data-done-text></p>
+            <div class="done__actions">
+              <a class="btn btn--ink btn--block" data-done-wa target="_blank" rel="noopener">
+                <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+                Volver a abrir WhatsApp
+              </a>
+              <button type="button" class="btn btn--line btn--block" data-ics>
+                <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cal"/></svg>
+                Agregar a mi calendario
+              </button>
+              <button type="button" class="link" data-restart>Pedir otro turno</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="services" id="servicios" aria-labelledby="serv-title">
+      <div class="wrap services__in">
+        <h2 id="serv-title" class="h2">Servicios</h2>
+        <div class="acc">
+          <details name="serv">
+            <summary>Derecho de familia</summary>
+            <ul>
+              <li><b>Divorcios</b> unilaterales o conjuntos.</li>
+              <li><b>Alimentos.</b> Fijación, aumento y cese de cuota alimentaria. Ejecución de alimentos.</li>
+              <li><b>Cuidado personal.</b></li>
+              <li><b>Régimen de comunicación.</b></li>
+              <li><b>Filiación.</b> Reconocimiento de hijos, impugnación y reclamo de paternidad.</li>
+              <li><b>Supresión de apellido. Cambio de nombre.</b></li>
+            </ul>
+          </details>
+          <details name="serv">
+            <summary>Derecho sucesorio</summary>
+            <ul>
+              <li><b>Sucesiones intestadas.</b> Declaratoria de herederos, partición y adjudicación, administración de bienes.</li>
+              <li><b>Sucesiones testadas.</b> Asesoramiento para redactar, entender o impugnar un testamento.</li>
+            </ul>
+          </details>
+          <details name="serv">
+            <summary>Derecho laboral</summary>
+            <ul>
+              <li><b>Laboral.</b> Despidos, suspensiones, empleo no registrado, salarios impagos, indemnizaciones y diferencias salariales.</li>
+              <li><b>Accidentes laborales y procesos ante ART.</b> Accidentes de trabajo, enfermedades profesionales e inculpables, y reclamos ante la ART.</li>
+            </ul>
+          </details>
+          <details name="serv">
+            <summary>Derecho penal</summary>
+            <ul>
+              <li><b>Defensa penal integral en todas las causas penales.</b> Asesoramiento, asistencia inmediata en el lugar de detención, defensa desde la denuncia hasta el juicio oral.</li>
+              <li><b>Excarcelaciones.</b></li>
+              <li><b>Eliminación de antecedentes.</b></li>
+            </ul>
+          </details>
+          <details name="serv">
+            <summary>Derecho de daños</summary>
+            <ul>
+              <li><b>Accidentes de tránsito.</b> Reclamos por lesiones, daños materiales, incapacidad y compensaciones derivadas de accidentes viales.</li>
+              <li><b>Daños y perjuicios.</b> Reclamo de indemnización por daños sufridos.</li>
+            </ul>
+          </details>
+          <details name="serv">
+            <summary>Derecho civil</summary>
+            <ul>
+              <li><b>Contratos.</b> Redacción, revisión e incumplimiento de contratos.</li>
+              <li><b>Prescripción adquisitiva.</b></li>
+            </ul>
+          </details>
+          <details name="serv">
+            <summary>Derecho previsional</summary>
+            <ul>
+              <li><b>Previsional y seguridad social.</b> Planificación de jubilaciones, jubilaciones.</li>
+            </ul>
+          </details>
+          <details name="serv">
+            <summary>Procesos ejecutivos</summary>
+            <ul>
+              <li><b>Pagarés y cheques.</b> Cobro judicial de pagarés y cheques.</li>
+              <li><b>Planes de ahorro.</b> Impugnación de planillas. Sentencia de remate.</li>
+            </ul>
+          </details>
+          <details name="serv">
+            <summary>Acompañamiento a mediación</summary>
+            <ul>
+              <li>Te brindamos asesoramiento y acompañamiento en cualquier audiencia de mediación.</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contacto" aria-labelledby="contact-title">
+      <div class="wrap contact__in">
+        <h2 id="contact-title" class="h2">Contacto</h2>
+        <ul class="people">
+          <li class="person">
+            <img src="../../assets/fotos/dra-flores-avatar.jpg" alt="" width="56" height="56" loading="lazy">
+            <div class="person__info">
+              <b>Dra. Ana Paula Flores</b>
+              <a href="tel:+5493875429897">+54 9 387 542-9897</a>
+              <a class="person__mail" href="mailto:anapaulaflores012706@gmail.com">anapaulaflores012706@gmail.com</a>
+            </div>
+            <a class="icon-btn icon-btn--wa" href="https://wa.me/5493875429897?text=Hola%20Dra.%20Flores%2C%20quisiera%20hacer%20una%20consulta." target="_blank" rel="noopener" aria-label="WhatsApp a la Dra. Flores"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg></a>
+          </li>
+          <li class="person">
+            <img src="../../assets/fotos/dra-yonar-avatar.jpg" alt="" width="56" height="56" loading="lazy">
+            <div class="person__info">
+              <b>Dra. Paula Talía Yonar</b>
+              <a href="tel:+5493874828131">+54 9 387 482-8131</a>
+              <a class="person__mail" href="mailto:abogadasalta.iuris@gmail.com">abogadasalta.iuris@gmail.com</a>
+            </div>
+            <a class="icon-btn icon-btn--wa" href="https://wa.me/5493874828131?text=Hola%20Dra.%20Yonar%2C%20quisiera%20hacer%20una%20consulta." target="_blank" rel="noopener" aria-label="WhatsApp a la Dra. Yonar"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg></a>
+          </li>
+        </ul>
+        <a class="place" href="https://www.google.com/maps/dir/?api=1&amp;destination=Santa+Fe+474%2C+Salta%2C+Argentina" target="_blank" rel="noopener" aria-label="Cómo llegar a Santa Fe 474, Salta, desde tu ubicación">
+          <img src="../../assets/fotos/mapa-santa-fe-474.jpg" alt="Mapa de la ubicación del estudio en Santa Fe 474, Salta" width="800" height="666" loading="lazy">
+          <span class="place__label">
+            <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>
+            <span><b>Santa Fe 474</b><small>Salta Capital · Cómo llegar desde donde estás</small></span>
+          </span>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <img src="../../assets/logo-crema.png" alt="Estudio Jurídico F&amp;Y, Salta Iuris" width="96" height="96" loading="lazy">
+      <ul class="social">
+        <li><a href="https://www.instagram.com/abogadas.salta.iuris" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ig"/></svg></a></li>
+        <li><a href="https://www.tiktok.com/@abogadas.salta.iuris" target="_blank" rel="noopener" aria-label="TikTok"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tt"/></svg></a></li>
+      </ul>
+      <p>© <span data-year>2026</span> Estudio Jurídico F&amp;Y · Salta Iuris</p>
+    </div>
+  </footer>
+  <button class="fab is-hidden" type="button" data-open-wa aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+  </button>
+  <div class="sheet" data-sheet hidden>
+    <div class="sheet__panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+      <span class="sheet__grip" aria-hidden="true"></span>
+      <p id="sheet-title" class="sheet__title">¿A quién le escribís?</p>
+      <a class="sheet__opt" href="https://wa.me/5493875429897?text=Hola%20Dra.%20Flores%2C%20quisiera%20hacer%20una%20consulta." target="_blank" rel="noopener">
+        <img src="../../assets/fotos/dra-flores-avatar.jpg" alt="" width="48" height="48">
+        <span><b>Dra. Ana Paula Flores</b><small>+54 9 387 542-9897</small></span>
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+      </a>
+      <a class="sheet__opt" href="https://wa.me/5493874828131?text=Hola%20Dra.%20Yonar%2C%20quisiera%20hacer%20una%20consulta." target="_blank" rel="noopener">
+        <img src="../../assets/fotos/dra-yonar-avatar.jpg" alt="" width="48" height="48">
+        <span><b>Dra. Paula Talía Yonar</b><small>+54 9 387 482-8131</small></span>
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+      </a>
+      <button class="btn btn--line btn--block" type="button" data-sheet-close>Cerrar</button>
+    </div>
+  </div>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9.1 7.9c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2 0 .5-.1.6l-.5.6c-.1.1-.1.3 0 .5.6 1 1.4 1.8 2.4 2.3.2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.7c.2.1.4.3.3.6-.1.9-.9 1.7-1.8 1.8-1.1.1-2.6-.4-4.1-1.8-1.6-1.5-2.4-3.1-2.2-4.2.1-.4.2-.6.4-.8Z" fill="currentColor"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 10h17M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6.1-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 14.9 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="9.8" r="2.3" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="i-tt" viewBox="0 0 24 24"><path d="M14.5 3.5c.3 2.4 1.9 4 4.5 4.2v2.9a7.4 7.4 0 0 1-4.4-1.4v5.9a5.6 5.6 0 1 1-5.6-5.6l.8.1v3a2.6 2.6 0 1 0 1.8 2.5V3.5h2.9Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1v-9.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="4.5" cy="6" r="1.2" fill="currentColor"/><circle cx="4.5" cy="12" r="1.2" fill="currentColor"/><circle cx="4.5" cy="18" r="1.2" fill="currentColor"/></symbol>
+  </svg>
+
+  <script src="../../js/main.js" defer></script>
+</body>
+</html>

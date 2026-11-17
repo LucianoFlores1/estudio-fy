@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Variantes de diseño · Estudio Jurídico F&amp;Y</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#2a1c13">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root { --walnut: #2a1c13; --paper: #f7f3ee; --cream: #f3e9dd; --soft: #d6c4b1; --bronze: #d2ad84; --line: rgba(166,124,82,.35); }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--walnut); color: var(--cream); font: 400 1rem/1.55 "Jost", system-ui, sans-serif; -webkit-tap-highlight-color: transparent; }
+    .wrap { max-width: 1400px; margin: auto; padding: 32px 20px 48px; }
+    h1 { margin: 0; font: 500 2.25rem/1.05 "Cormorant Garamond", Georgia, serif; }
+    .lede { margin: 10px 0 28px; color: var(--soft); max-width: 40em; }
+    .grid { display: grid; gap: 14px; }
+    .card { display: grid; gap: 14px; padding: 18px; border: 1px solid var(--line); border-radius: 18px; text-decoration: none; color: inherit; }
+    .card h2 { margin: 0; font: 500 1.625rem/1.1 "Cormorant Garamond", Georgia, serif; }
+    .card h2 span { color: var(--bronze); font-style: italic; }
+    .card p { margin: 4px 0 0; color: var(--soft); font-size: .9375rem; }
+    .phone { display: none; }
+    .open { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 20px; border-radius: 999px; background: var(--cream); color: var(--walnut); font-weight: 500; text-decoration: none; }
+    .card:active .open { transform: scale(.97); }
+    .row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .ghost { background: transparent; color: var(--cream); border: 1px solid var(--line); }
+    @media (min-width: 1100px) {
+      .wrap { padding: 48px 32px 64px; }
+      h1 { font-size: 3rem; }
+      .grid { grid-template-columns: repeat(3, 1fr); gap: 28px; align-items: start; }
+      .phone {
+        display: block;
+        width: 100%;
+        aspect-ratio: 390 / 844;
+        border-radius: 36px;
+        overflow: hidden;
+        border: 8px solid #120b07;
+        box-shadow: 0 30px 60px -30px rgba(0,0,0,.8);
+        background: #000;
+        position: relative;
+      }
+      .phone iframe { position: absolute; top: 0; left: 0; width: 390px; height: 844px; border: 0; transform-origin: 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Tres diseños para elegir</h1>
+    <p class="lede">Las tres usan el mismo sistema de turnos, los mismos servicios y contactos. Cambia cómo se recorre la página. En la computadora podés usarlas dentro de cada celular; también se pueden abrir en pantalla completa para ver la versión de escritorio.</p>
+
+    <div class="grid">
+      <article class="card">
+        <div class="phone"><iframe src="a/" title="Variante A en celular" loading="lazy"></iframe></div>
+        <div>
+          <h2>A · <span>Retrato</span></h2>
+          <p>Las dos abogadas abren la página a pantalla completa. Abajo, una barra fija con “Reservar turno” y WhatsApp que acompaña todo el recorrido.</p>
+        </div>
+        <div class="row"><a class="open" href="a/">Abrir variante A</a></div>
+      </article>
+      <article class="card">
+        <div class="phone"><iframe src="b/" title="Variante B en celular" loading="lazy"></iframe></div>
+        <div>
+          <h2>B · <span>Membrete</span></h2>
+          <p>Página clara, como papel con membrete: el logo encabeza, la frase y sus tres valores, y las abogadas presentadas como firmas.</p>
+        </div>
+        <div class="row"><a class="open" href="b/">Abrir variante B</a></div>
+      </article>
+      <article class="card">
+        <div class="phone"><iframe src="c/" title="Variante C en celular" loading="lazy"></iframe></div>
+        <div>
+          <h2>C · <span>Turnero</span></h2>
+          <p>El turno arriba de todo: tocás a la abogada y ya estás eligiendo día en un selector deslizable. Navegación de app con pestañas abajo.</p>
+        </div>
+        <div class="row"><a class="open" href="c/">Abrir variante C</a></div>
+      </article>
+    </div>
+    <p class="lede" style="margin-top:32px">Versión actual publicada: <a href="../" style="color:var(--bronze)">ver sitio</a></p>
+  </div>
+  <script>
+    function fit() {
+      document.querySelectorAll(".phone").forEach(function (p) {
+        var f = p.querySelector("iframe"); if (!f) return;
+        f.style.transform = "scale(" + (p.clientWidth / 390) + ")";
+      });
+    }
+    addEventListener("resize", fit); fit();
+  </script>
+</body>
+</html>
