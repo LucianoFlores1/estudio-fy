@@ -18,7 +18,9 @@ PEOPLE = grab('<ul class="people">', "</ul>")
 PLACE = grab('<a class="place"', "</a>")
 SHEET = grab('<div class="sheet"', "</div>\n  </div>")
 SPRITE = grab('<svg width="0" height="0"', "</svg>\n")
-FAB = grab('<button class="fab', "</button>")
+FAB = """<button class="fab is-hidden" type="button" data-open-wa aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+  </button>"""
 
 EXTRA_ICONS = """    <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1v-9.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
     <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="4.5" cy="6" r="1.2" fill="currentColor"/><circle cx="4.5" cy="12" r="1.2" fill="currentColor"/><circle cx="4.5" cy="18" r="1.2" fill="currentColor"/></symbol>

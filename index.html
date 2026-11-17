@@ -83,7 +83,7 @@
   }
   </script>
 </head>
-<body>
+<body class="v-a">
   <a class="skip" href="#turnos">Ir a reservar turno</a>
 
   <header class="top">
@@ -97,40 +97,25 @@
         <a href="#servicios">Servicios</a>
         <a href="#contacto">Contacto</a>
       </nav>
-      <a class="btn btn--cream btn--sm" href="#turnos">Reservar turno</a>
+      <a class="btn btn--cream btn--sm top__cta" href="#turnos">Reservar turno</a>
     </div>
   </header>
 
   <main>
     <!-- INICIO -->
+    <!-- INICIO -->
     <section class="hero" id="inicio">
-      <div class="hero__in wrap">
-        <div class="hero__copy">
-          <h1 class="hero__title">Somos un estudio jurídico integrado por <em>abogadas</em> con ejercicio profesional en la Provincia de Salta.</h1>
-          <p class="hero__lede">Brindamos asesoramiento y representación legal integral, acompañando a nuestros clientes en la prevención, resolución y seguimiento de sus asuntos jurídicos, con un enfoque <b>responsable, personalizado y comprometido</b>.</p>
-
-          <div class="hero__cta">
-            <a class="btn btn--cream btn--lg" href="#turnos">
-              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cal"/></svg>
-              Reservar turno
-            </a>
-            <button class="btn btn--ghost btn--lg" type="button" data-open-wa>
-              <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
-              WhatsApp
-            </button>
-          </div>
+      <div class="ra">
+        <figure class="ra__ph"><img src="assets/fotos/dra-flores.jpg" alt="Dra. Ana Paula Flores, abogada en Salta" width="1000" height="1250" fetchpriority="high"><figcaption>Dra. Ana Paula Flores</figcaption></figure>
+        <figure class="ra__ph"><img src="assets/fotos/dra-yonar.jpg" alt="Dra. Paula Talía Yonar, abogada en Salta" width="1000" height="1250"><figcaption>Dra. Paula Talía Yonar</figcaption></figure>
+      </div>
+      <div class="ra__copy">
+        <h1 class="hero__title">Somos un estudio jurídico integrado por <em>abogadas</em> con ejercicio profesional en la Provincia de Salta.</h1>
+        <p class="hero__lede">Brindamos asesoramiento y representación legal integral, acompañando a nuestros clientes en la prevención, resolución y seguimiento de sus asuntos jurídicos, con un enfoque <b>responsable, personalizado y comprometido</b>.</p>
+        <div class="hero__cta ra__cta">
+          <a class="btn btn--cream btn--lg" href="#turnos"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cal"/></svg>Reservar turno</a>
+          <button class="btn btn--ghost btn--lg" type="button" data-open-wa><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</button>
         </div>
-
-        <ul class="duo" aria-label="Las abogadas">
-          <li class="duo__item">
-            <img src="assets/fotos/dra-flores.jpg" alt="Dra. Ana Paula Flores" width="1000" height="1250">
-            <span>Dra. Ana Paula Flores</span>
-          </li>
-          <li class="duo__item">
-            <img src="assets/fotos/dra-yonar.jpg" alt="Dra. Paula Talía Yonar" width="1000" height="1250">
-            <span>Dra. Paula Talía Yonar</span>
-          </li>
-        </ul>
       </div>
     </section>
 
@@ -385,10 +370,11 @@
     </div>
   </footer>
 
-  <!-- WhatsApp flotante -->
-  <button class="fab is-hidden" type="button" data-open-wa aria-label="Escribir por WhatsApp">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
-  </button>
+  <!-- Acciones fijas en celular -->
+  <nav class="actbar" aria-label="Acciones rápidas">
+    <a class="btn btn--cream actbar__main" href="#turnos"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cal"/></svg>Reservar turno</a>
+    <button class="actbar__wa" type="button" data-open-wa aria-label="Escribir por WhatsApp"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg></button>
+  </nav>
 
   <div class="sheet" data-sheet hidden>
     <div class="sheet__panel" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
